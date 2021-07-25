@@ -1,0 +1,171 @@
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@100&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+         :root {
+            --cor-fundo: rgba(43, 33, 33, 0.979);
+            --cor-hover: rgb(136, 120, 76);
+            --cor-primaria: white;
+        }
+        
+        html,
+        body {
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            margin-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        body {
+            background-size: 100%;
+            background-image: url("fundobody.png");
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            color: aliceblue;
+            font-size: 18pt;
+        }
+        /*Cabeçalho */
+        
+        div.cabecalho {
+            text-align: center;
+            margin-left: 40%;
+            box-shadow: 10px 10px 10px 0px #359ff5;
+            position: fixed;
+        }
+        /*Menu Principal*/
+        
+        .dp-menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            top: 60px;
+            width: 100%;
+            display: inline-block;
+            position: fixed;
+        }
+        
+        .dp-menu ul {
+            background-color: var(--cor-fundo);
+        }
+        
+        .dp-menu ul li {
+            float: left;
+            display: inline;
+            position: relative;
+        }
+        
+        .dp-menu ul li a {
+            display: inline-block;
+            color: white;
+            text-align: justify;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background .3s;
+        }
+        
+        .dp-menu ul li a:hover {
+            background-color: var(--cor-hover);
+        }
+        /*sub menu*/
+        
+        .dp-menu ul ul {
+            display: none;
+            left: 0;
+            position: absolute;
+            box-shadow: 10px 10px 10px 0px #359ff5;
+        }
+        
+        .dp-menu ul li:hover ul {
+            display: block;
+        }
+        
+        .dp-menu ul ul {
+            width: 150px;
+        }
+        
+        .dp-menu ul ul li a {
+            display: block;
+        }
+        
+        header {
+            display: flex;
+            list-style: none;
+        }
+        
+        @media screen and (max-width: 500px) {
+            .column {
+                width: 100%;
+            }
+        }
+        
+        .galeria {
+            margin-top: 20px;
+            width: 40%;
+            height: 200px;
+            margin: 200px 0px;
+            float: left;
+        }
+        
+        .galeria2 {
+            width: 30%;
+            height: 200px;
+            margin: -450px 1000px;
+            float: right;
+            overflow: hidden;
+        }
+        
+        .foto {
+            background-color: rgba(53, 53, 56, 0.226);
+            width: 600px;
+            height: 500px;
+            position: absolute;
+            opacity: 0;
+            animation-name: animacao;
+            animation-duration: 20s;
+            animation-iteration-count: infinite;
+            box-shadow: 10px 10px 10px 0px #359ff5;
+            border-radius: 15%;
+        }
+        
+        .foto:nth-child(1) {
+            animation-delay: 0s;
+        }
+        
+        .foto:nth-child(2) {
+            animation-delay: 5s;
+        }
+        
+        .foto:nth-child(3) {
+            animation-delay: 10s;
+        }
+        
+        .foto:nth-child(4) {
+            animation-delay: 15s;
+        }
+        
+        @keyframes animacao {
+            25% {
+                opacity: 1;
+                transform: scale(1.1, 1.1);
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+        
+        .rodape {
+            background-color: var(--cor-fundo);
+            bottom: 0;
+            position: fixed;
+            width: 100%;
+        }
+        
+        .rodape p {
+            color: white;
+            text-align: center;
+        }
